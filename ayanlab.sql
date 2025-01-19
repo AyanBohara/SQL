@@ -75,3 +75,31 @@ CREATE TABLE Messages (
     user_id INT NOT NULL,                       -- User who sent the message (foreign key)
     FOREIGN KEY (user_id) REFERENCES Users(user_id)  -- Foreign key to Users table
 );
+
+//Alert
+ALTER TABLE Users
+MODIFY address VARCHAR(100);
+
+--ALTER TABLE Messages
+--MODIFY m_title VARCHAR(50) NOT NULL;
+ALTER TABLE Messages
+MODIFY m_title VARCHAR(50);
+
+ALTER TABLE Messages
+ADD CONSTRAINT unique_feedback UNIQUE (m_feedback);
+
+ALTER TABLE Users
+DROP COLUMN address;
+
+Desc Users;
+ALTER TABLE Messages
+DROP CONSTRAINT unique_feedback;
+Desc Messages;
+
+
+
+
+
+
+
+
