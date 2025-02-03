@@ -1,103 +1,75 @@
-CREATE TABLE Users (
-    user_id INT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    phone_number VARCHAR(15),
-    birth_date DATE
+-- ALL DML Commands
+
+INSERT INTO Users (user_id, username, email, phone_number,address)
+VALUES (11, 'Mayan', ',mayan@gmail.com', '1234567890','Raniban');
+
+INSERT INTO Category (category_id, category_name)
+VALUES (2, 'Laptops');
+
+INSERT INTO Sub_Category (subcategory_id, category_id, sub_category_name)
+VALUES (2, 2, 'DELL');
+
+INSERT INTO Articles (article_id, article_name, stock, rating_number, sub_category_id, description, price)
+VALUES (2, 'DELL', 'In Stock', 4.5, 1, 'Latest laptop model', 99999.99);
+
+
+INSERT INTO Cart (cart_id, user_id, article_id, article_quantity)
+VALUES (2, 10, 2, 1);
+
+INSERT INTO Orders (order_id, cart_id, user_id, cart_date, status, shipping_address, payment_method)
+VALUES (2, 2, 10, TO_DATE('2025-01-19', 'YYYY-MM-DD'), 'Shipped', '123 Main St, City, Country', 'Credit Card');
+INSERT INTO Orders (order_id, cart_id, user_id, cart_date, status, shipping_address, payment_method)
+VALUES (3, 2, 10, TO_DATE('2025-02-03', 'YYYY-MM-DD'), 'Cancelled', 'Raniban', 'Cash on delibery');
+
+SELECT * FROM Users;
+SELECT * FROM Category;
+SELECT * FROM Sub_Category;
+SELECT * FROM Articles;
+SELECT * FROM Cart;
+SELECT * FROM Orders;
+
+SELECT o.order_id, o.status, u.username
+FROM Orders o
+JOIN Users u ON o.user_id = u.user_id
+WHERE u.username LIKE 'A%';
+
+SELECT o.*
+FROM Orders o
+JOIN Users u ON o.user_id = u.user_id
+WHERE u.username LIKE 'A%';
+
+
+
+-- Update User's phone number
+UPDATE Users 
+SET phone_number = '9876743210' 
+WHERE user_id = 10;
+
+-- Update category name
+UPDATE Category 
+SET category_name = 'Mobile Phone' 
+WHERE category_id = 1;
+
+-- Update stock of the article
+UPDATE Articles 
+SET stock = 'Out of Stock', price = 94999.99 
+WHERE article_id = 2;
+
+-- Update order status
+UPDATE Orders 
+SET status = 'Delivered' 
+WHERE order_id = 2;
+
+
+UPDATE Users 
+SET address = 'Balaju'
+WHERE user_id IN (
+    SELECT DISTINCT user_id 
+    FROM Orders 
+    WHERE status = 'Delivered'
 );
 
-CREATE TABLE Admin (
-    admin_id INT PRIMARY KEY,
-    user_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
-);
-
-CREATE TABLE Category (
-    category_id INT PRIMARY KEY,
-    category_name VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE Sub_Category (
-    subcategory_id INT PRIMARY KEY,
-    category_id INT NOT NULL,
-    sub_category_name VARCHAR(100) NOT NULL,
-    FOREIGN KEY (category_id) REFERENCES Category(category_id)
-);
-
-CREATE TABLE Articles (
-    article_id INT PRIMARY KEY,             -- Primary key for Articles
-    article_name VARCHAR(100) NOT NULL,     -- Name of the article
-    stock VARCHAR(50) NOT NULL,             -- Stock information
-    rating_number NUMBER(3, 2),             -- Rating for the article (up to 3 digits, 2 decimals)
-    sub_category_id INT NOT NULL,           -- Foreign key referencing Sub_Category
-    description VARCHAR(50),                       -- Description of the article
-    price NUMBER(10, 2),                    -- Price of the article
-    FOREIGN KEY (sub_category_id) REFERENCES Sub_Category(subcategory_id)
-);
-
-CREATE TABLE Cart (
-    cart_id INT PRIMARY KEY,                -- Primary key for Cart
-    user_id INT NOT NULL,                   -- Foreign key referencing Users
-    article_id INT NOT NULL,                -- Foreign key referencing Articles
-    article_quantity INT NOT NULL,          -- Quantity of the article in the cart
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (article_id) REFERENCES Articles(article_id)
-);
-
-CREATE TABLE Orders (
-    order_id INT PRIMARY KEY,               -- Primary key for Order_Table
-    cart_id INT NOT NULL,                   -- Foreign key referencing Cart
-    user_id INT NOT NULL,                   -- Foreign key referencing Users
-    cart_date DATE NOT NULL,                -- Date when the order was created
-    status VARCHAR(50),                     -- Status of the order
-    shipping_address VARCHAR(50),                  -- Shipping address for the order
-    payment_method VARCHAR(50),             -- Payment method used
-    FOREIGN KEY (cart_id) REFERENCES Cart(cart_id),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
-);
-
-CREATE TABLE Article_Review (
-    review_id INT PRIMARY KEY,              -- Primary key for Article_Review
-    article_id INT NOT NULL,                -- Foreign key referencing Articles
-    user_id INT NOT NULL,                   -- Foreign key referencing Users
-    review_title VARCHAR(50),              -- Title of the review
-    review_body VARCHAR(100),                       -- Body of the review
-    review_rating NUMBER(3, 2),             -- Rating given in the review (up to 3 digits, 2 decimals)
-    review_date DATE,                       -- Date of the review
-    FOREIGN KEY (article_id) REFERENCES Articles(article_id),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
-);
-
-CREATE TABLE Messages (
-    m_id INT PRIMARY KEY,                      -- Unique ID for each message
-    m_title VARCHAR(255) NOT NULL,              -- Title of the message
-    m_feedback VARCHAR(1000),                   -- Feedback or content of the message
-    user_id INT NOT NULL,                       -- User who sent the message (foreign key)
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)  -- Foreign key to Users table
-);
-
-//Alert
-ALTER TABLE Users
-MODIFY address VARCHAR(100);
-
---ALTER TABLE Messages
---MODIFY m_title VARCHAR(50) NOT NULL;
-ALTER TABLE Messages
-MODIFY m_title VARCHAR(50);
-
-ALTER TABLE Messages
-ADD CONSTRAINT unique_feedback UNIQUE (m_feedback);
-
-ALTER TABLE Users
-DROP COLUMN address;
-
-Desc Users;
-ALTER TABLE Messages
-DROP CONSTRAINT unique_feedback;
-Desc Messages;
-
-
-
+Select *  from Users;
 
 
 
