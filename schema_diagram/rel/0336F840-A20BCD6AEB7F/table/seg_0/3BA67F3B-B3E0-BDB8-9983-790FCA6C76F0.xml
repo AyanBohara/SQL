@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3BA67F3B-B3E0-BDB8-9983-790FCA6C76F0" schemaObject="4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4" name="CART">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>CART</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CART_ID" id="BDDDF38C-B434-592A-E1A0-F29693D0FD46">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>CART_ID</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="756C96CD-FBF2-9A2E-44E2-6FCA26EAEA9E">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81544716-EE2D-AB0C-B18F-1D8AB6C59364" referredColumn="BDB8EB9E-A441-99BA-50C8-2BE5B8D54DA9"/>
+</associations>
+</Column>
+<Column name="ARTICLE_ID" id="920E8D89-5349-D1DC-7D37-0E71A6EC2032">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>ARTICLE_ID</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EB478E61-CBCC-B16B-86D3-83D66DFEC339" referredColumn="5F8A4615-0E01-3BB6-EA2D-D122E8BA9F23"/>
+</associations>
+</Column>
+<Column name="ARTICLE_QUANTITY" id="EFFE7AE6-FE64-E770-07AB-7BAD360F6E01">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>ARTICLE_QUANTITY</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="18CA1D20-19F8-1C16-568D-8B3AE7A4E3AC" schemaObject="4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4" name="CART_PK">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008391</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDDDF38C-B434-592A-E1A0-F29693D0FD46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2D96E8A-975D-1DAC-F0CE-9F0CA81BF3C9" name="SYS_C008392">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="756C96CD-FBF2-9A2E-44E2-6FCA26EAEA9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17994564-762C-051C-030E-E7CF20AA2AAF" name="SYS_C008393">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:45 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="920E8D89-5349-D1DC-7D37-0E71A6EC2032"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

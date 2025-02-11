@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ORDERS" directorySegmentName="seg_0" id="26BAFE79-94A1-E58C-0AEE-94205BC738E1">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<schemaObject>4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>079DB865-EB52-2AC9-29F6-4B06E873D0A6</segment>
+<tableSpace>1CEECD92-AFE8-B7EA-07E0-A7E1269168D4</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PAYMENT_METHOD" id="1AB1D09C-5A9B-9493-FE98-372BE72C8172">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CART_DATE" id="201638F3-5D5F-FCF1-97A2-F8AF88279E36">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CART_ID" id="473E0CA0-33D0-D2B1-B07A-9B80ADBF1C56">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="A2D2659B-3D44-D3E5-6DC8-75D5F0C45AA1">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHIPPING_ADDRESS" id="DF4B6946-31D5-19F9-88C1-97D37D0D3DE0">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORDER_ID" id="E3373C82-4B67-2A9B-BEEA-21045A519DBB">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUS" id="FA96B38C-D4FF-1ABC-29F0-941F738871AE">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008399" id="6ACECEFD-4862-C36A-00A2-8E6733691095">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008398" id="CFBD31BD-8AB1-E45A-4739-B785C8298895">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ORDERS_PK" id="75E92D68-9A2E-F1B6-1943-B60D633B8FAA">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:36 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<schemaObject>4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4</schemaObject>
+<segment>3E395E44-002C-087D-61B2-30C721F38CDF</segment>
+<tableSpace>1CEECD92-AFE8-B7EA-07E0-A7E1269168D4</tableSpace>
+<indexSegment>3E395E44-002C-087D-61B2-30C721F38CDF</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="schema_diagram" id="492BA404-A184-A34F-4A01-C0E0F881562E" version="3.5">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:01 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>492BA404-A184-A34F-4A01-C0E0F881562E</designId>
+</OSDM_Design>

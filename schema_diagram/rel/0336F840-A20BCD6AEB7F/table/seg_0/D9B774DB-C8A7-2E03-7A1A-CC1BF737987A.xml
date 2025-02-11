@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D9B774DB-C8A7-2E03-7A1A-CC1BF737987A" schemaObject="4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4" name="USERS">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="BDB8EB9E-A441-99BA-50C8-2BE5B8D54DA9">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERNAME" id="DE093244-C323-771E-B46B-695BE73FA9A5">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USERNAME</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="BDD8A142-4FE9-67B1-5FFE-B288204D9F10">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE_NUMBER" id="3F3D3B50-440A-D754-4438-F63C7B1FDA74">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="B6CBB093-6990-7298-BCA8-C5650ED24AAA">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>ADDRESS</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7D431763-CA2C-1A72-5A00-03E75BBD7705" schemaObject="4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4" name="USERS_PK">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008372</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDB8EB9E-A441-99BA-50C8-2BE5B8D54DA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82821930-786A-A37E-DF7C-8A0A54E12223" schemaObject="4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4" name="USERS_EMAIL_UN">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008373</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:34:14 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDD8A142-4FE9-67B1-5FFE-B288204D9F10"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

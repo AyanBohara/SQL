@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C6FF312E-0861-1EA7-0E43-49AAA3473A8A" schemaObject="4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4" name="ARTICLES">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>ARTICLES</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ARTICLE_ID" id="5F8A4615-0E01-3BB6-EA2D-D122E8BA9F23">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>ARTICLES</sourceObjSchema>
+<sourceObjName>ARTICLE_ID</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARTICLE_NAME" id="FEAACC3A-6AF2-CF7A-74A4-79944CC9202D">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>ARTICLES</sourceObjSchema>
+<sourceObjName>ARTICLE_NAME</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STOCK" id="4E40E033-9094-FB37-22D3-A8A72E320BCC">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>ARTICLES</sourceObjSchema>
+<sourceObjName>STOCK</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RATING_NUMBER" id="06175760-3824-C0D7-F45C-01EAEFFC968C">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>ARTICLES</sourceObjSchema>
+<sourceObjName>RATING_NUMBER</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,3,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUB_CATEGORY_ID" id="CBEC54E8-781D-A8CE-3DFC-415A7CF89E87">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>ARTICLES</sourceObjSchema>
+<sourceObjName>SUB_CATEGORY_ID</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="60CCD266-3E5A-07B8-B0A8-C63416C011BF" referredColumn="20882E9F-3AAD-A63B-8017-3AFDB2E8DCC3"/>
+</associations>
+</Column>
+<Column name="DESCRIPTION" id="E2D53DE5-E568-6210-76AA-6A2EF4580239">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>ARTICLES</sourceObjSchema>
+<sourceObjName>DESCRIPTION</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="567ABFA6-74AD-F5AA-9F00-E191AC0B9603">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>ARTICLES</sourceObjSchema>
+<sourceObjName>PRICE</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2400AA90-C0F4-301A-6D35-2A7F59D2A656" schemaObject="4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4" name="ARTICLES_PK">
+<sourceConnName>ayanlab</sourceConnName>
+<sourceObjSchema>SYSTEM</sourceObjSchema>
+<sourceObjName>SYS_C008386</sourceObjName>
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F8A4615-0E01-3BB6-EA2D-D122E8BA9F23"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="083EA920-50C2-FB00-C4D2-1AC5D284271D" name="SYS_C008387">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:36:02 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBEC54E8-781D-A8CE-3DFC-415A7CF89E87"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

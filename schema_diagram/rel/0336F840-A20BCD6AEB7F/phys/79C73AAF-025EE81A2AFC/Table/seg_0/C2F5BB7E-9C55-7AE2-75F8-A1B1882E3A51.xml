@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CATEGORY" directorySegmentName="seg_0" id="C2F5BB7E-9C55-7AE2-75F8-A1B1882E3A51">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:40:18 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<schemaObject>4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>079DB865-EB52-2AC9-29F6-4B06E873D0A6</segment>
+<tableSpace>1CEECD92-AFE8-B7EA-07E0-A7E1269168D4</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CATEGORY_NAME" id="33D2D9F7-7260-632B-42C1-714A6422FCD1">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:40:18 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CATEGORY_ID" id="AA07DCF0-04AF-AFF5-7EA4-8CC9E29DB75F">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:40:18 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CATEGORY_PK" id="FAFE57DB-F645-6DFD-C178-C25C7273FCCF">
+<createdBy>DELL</createdBy>
+<createdTime>2025-02-11 14:40:18 UTC</createdTime>
+<ownerDesignName>schema_diagram</ownerDesignName>
+<schemaObject>4B5C4460-2E23-BFB9-1D7A-FCBD07410EC4</schemaObject>
+<segment>3E395E44-002C-087D-61B2-30C721F38CDF</segment>
+<tableSpace>1CEECD92-AFE8-B7EA-07E0-A7E1269168D4</tableSpace>
+<indexSegment>3E395E44-002C-087D-61B2-30C721F38CDF</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
