@@ -1,0 +1,129 @@
+//1
+CREATE PROFILE c##account_profile LIMIT
+  SESSIONS_PER_USER 1
+  CPU_PER_SESSION UNLIMITED
+  CPU_PER_CALL 5000
+  LOGICAL_READS_PER_SESSION UNLIMITED
+  LOGICAL_READS_PER_CALL 100
+  IDLE_TIME 45
+  CONNECT_TIME 240;
+  
+  SELECT PROFILE FROM DBA_PROFILES GROUP BY PROFILE;
+//2
+CREATE USER C##Susan IDENTIFIED BY Susan123
+  DEFAULT TABLESPACE USERS
+  TEMPORARY TABLESPACE TEMP
+  QUOTA 20K ON USERS
+  PROFILE DEFAULT;
+
+SELECT username, common, con_id
+FROM CDB_USERS
+WHERE username = 'C##SUSAN';
+
+CREATE USER C##Ramesh IDENTIFIED BY Ramesh123
+  DEFAULT TABLESPACE USERS
+  TEMPORARY TABLESPACE TEMP
+  QUOTA 20K ON USERS
+  PROFILE DEFAULT;
+
+
+SELECT username, common, con_id
+FROM CDB_USERS
+WHERE username = 'C##Ramesh';
+
+CREATE USER C##Alka IDENTIFIED BY Alka123
+  DEFAULT TABLESPACE USERS
+  TEMPORARY TABLESPACE TEMP
+  QUOTA 20K ON USERS
+  PROFILE DEFAULT;
+--  3
+SELECT username, default_tablespace, temporary_tablespace
+FROM DBA_USERS
+WHERE username IN ('SUSAN', 'RAMESH', 'ALKA');
+
+SELECT SYS_CONTEXT('USERENV', 'CON_NAME') AS CURRENT_CONTAINER FROM DUAL;
+
+--SELECT name, open_mode
+--FROM V$PDBS;
+--ALTER SESSION SET CONTAINER = PDB1;
+--ALTER USER C##Susan PROFILE C##account_profile;
+--
+--SELECT resource_name, limit
+--FROM DBA_PROFILES
+--WHERE profile = 'C##ACCOUNT_PROFILE';
+
+ALTER USER C##Susan PROFILE C##ACCOUNT_PROFILE;
+
+SELECT username, profile
+FROM DBA_USERS
+WHERE username = 'C##SUSAN';
+
+//not necessary to write alter session , select sys_contecxt
+  ALTER SESSION SET CONTAINER = XEPDB1;
+  SELECT SYS_CONTEXT('USERENV', 'CON_NAME') AS CURRENT_CONTAINER FROM DUAL;
+--4
+CREATE TABLESPACE DATA01
+  DATAFILE 'data02.dbf' SIZE 100M
+  AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED;
+  
+  SELECT file_name, tablespace_name
+FROM DBA_DATA_FILES
+WHERE tablespace_name = 'DATA01';
+
+ALTER USER C##Alka
+  DEFAULT TABLESPACE DATA01
+  QUOTA 20K ON DATA01;
+  
+  SELECT username, default_tablespace, temporary_tablespace
+FROM DBA_USERS
+WHERE username = 'C##ALKA';
+
+--5
+ALTER USER C##Ramesh QUOTA 10K ON application;
+
+--6
+SELECT tablespace_name, username, bytes, max_bytes, blocks
+FROM DBA_TS_QUOTAS
+WHERE username IN ('C##Susan', 'C##Ramesh', 'C#Alka');
+
+--7
+CONNECT C##Susan/Susan123;
+GRANT CREATE SESSION TO C##Susan;
+
+--8
+CREATE ROLE application_developer;
+GRANT CREATE SESSION, CREATE TABLE, SELECT ANY TABLE TO application_developer;
+GRANT application_developer, CONNECT TO C##Ramesh WITH ADMIN OPTION;
+SELECT grantee, granted_role FROM DBA_ROLE_PRIVS WHERE grantee IN ('C##Susan', 'C##Ramesh', 'C##Alka');
+
+--9
+CONNECT C##Alka/Alka123;
+GRANT CREATE SESSION TO C##Alka;
+CREATE TABLE TEST (
+  TEST_COLUMN VARCHAR2(20)
+);
+INSERT INTO TEST (TEST_COLUMN) VALUES ('First Row');
+
+--10
+INSERT INTO TEST (TEST_COLUMN) VALUES ('Second Row');
+INSERT INTO TEST (TEST_COLUMN) VALUES ('Third Row');
+SELECT * FROM TEST;
+
+--11
+CONNECT C##Ramesh/Ramesh123;
+SELECT * FROM C##Alka.TEST;
+--this code shows error so to fix the error here is the code below
+CONNECT C##Alka/Alka123;
+GRANT SELECT ON TEST TO C##Ramesh;
+
+--12
+CREATE ROLE data_entry_clerk;
+GRANT SELECT, INSERT ON C##Alka.TEST TO data_entry_clerk;
+GRANT data_entry_clerk TO C##Susan, C##Ramesh;
+
+CONNECT Susan/Susan123;
+
+INSERT INTO Alka.TEST (TEST_COLUMN) VALUES ('Fourth Row');
+
+--13
+REVOKE INSERT ON C##Alka.TEST FROM C##Ramesh;

@@ -1,0 +1,9 @@
+SELECT SYS_CONTEXT('USERENV','CON_NAME') FROM DUAL;
+
+Create User Ayan Identified By Password;
+//change from PDB to CDB
+ALTER SESSION SET CONTAINER = ORCLPDB;
+//change from PDB to another PDB
+ALTER SESSION SET CONTAINER = NEWPDB;
+//change from pdb to cdb
+ALTER SESSION SET CONTAINER = CDB$ROOT;
